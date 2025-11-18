@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 17% 97%;
+    --foreground: 224 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 15%;
+
+    /* DIGIMAP Primary - Indigo */
+    --primary: 239 68% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 239 68% 55%;
+
+    /* DIGIMAP Secondary - Pink accent */
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* DIGIMAP Tertiary - Cyan accent */
+    --tertiary: 189 94% 43%;
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 220 17% 95%;
+    --muted-foreground: 224 15% 45%;
+
+    --accent: 239 68% 95%;
+    --accent-foreground: 239 68% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 17% 90%;
+    --input: 220 17% 90%;
+    --ring: 239 68% 60%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 68% 60%) 0%, hsl(330 81% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(239 68% 60%) 0%, hsl(189 94% 43%) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(239 68% 60% / 0.1);
+    --shadow-button: 0 4px 14px -2px hsl(239 68% 60% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 224 25% 10%;
+    --foreground: 220 17% 95%;
+
+    --card: 224 20% 14%;
+    --card-foreground: 220 17% 95%;
+
+    --popover: 224 20% 14%;
+    --popover-foreground: 220 17% 95%;
+
+    --primary: 239 68% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 239 68% 60%;
+
+    --secondary: 330 81% 65%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --tertiary: 189 94% 50%;
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 224 20% 18%;
+    --muted-foreground: 220 17% 65%;
+
+    --accent: 239 68% 20%;
+    --accent-foreground: 239 68% 90%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 239 68% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
